@@ -1,0 +1,11 @@
+Spring Security
+
+Basic security
+- in browser Headers! string to take access
+	
+	user:password (encoded by Base64) for example
+	user:2532daa4-3990-44e7-a6bf-38cf7ef7f05e  ->  dXNlcjoyNTMyZGFhNC0zOTkwLTQ0ZTctYTZiZi0zOGNmN2VmN2YwNWU=
+
+	Header add
+	Authorization "Basic dXNlcjoyNTMyZGFhNC0zOTkwLTQ0ZTctYTZiZi0zOGNmN2VmN2YwNWU=" -> allow us to be Authorized
+
