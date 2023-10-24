@@ -17,7 +17,7 @@ import static org.springframework.security.test.web.servlet.setup.SecurityMockMv
 
 @WebMvcTest
 public class BaseIT {
-    MockMvc mockMvc;
+    public MockMvc mockMvc;
 
     @Autowired
     WebApplicationContext wac;
