@@ -1,6 +1,6 @@
 Spring Security
 
-Basic security
+1 Basic security
 - in browser Headers! string to take access
 	
 	user:password (encoded by Base64) for example
@@ -9,3 +9,13 @@ Basic security
 	Header add
 	Authorization "Basic dXNlcjoyNTMyZGFhNC0zOTkwLTQ0ZTctYTZiZi0zOGNmN2VmN2YwNWU=" -> allow us to be Authorized
 
+2 Basic security inMemory	
+
+	@Override userDetailsService() method and create Bean InMemoryUserDetailsManager(user1, user2)
+	Or
+	@Override configure(AuthenticationManagerBuilder auth){
+	  auth.inMemoryAuthentication()
+	} and create users there
+
+
+3 Password Security
