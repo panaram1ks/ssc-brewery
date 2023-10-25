@@ -16,7 +16,7 @@ import java.io.IOException;
 public class RestHeaderAuthFilter extends AbstractAuthenticationProcessingFilter {
 
 
-    protected RestHeaderAuthFilter(RequestMatcher requiresAuthenticationRequestMatcher) {
+    public RestHeaderAuthFilter(RequestMatcher requiresAuthenticationRequestMatcher) {
         super(requiresAuthenticationRequestMatcher);
     }
 
