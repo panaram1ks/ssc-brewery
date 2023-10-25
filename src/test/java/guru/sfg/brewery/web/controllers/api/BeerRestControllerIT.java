@@ -5,11 +5,20 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @WebMvcTest
 class BeerRestControllerIT extends BaseIT {
+
+    @Test
+    void deleteBear() throws Exception {
+        mockMvc.perform(delete("/api/v1/beer/code")
+                .header("Api-Key", "spring")
+                .header("Api-Secret","guru")
+        ).andExpect(status().isOk());
+    }
 
     @Test
     void findBeers() throws Exception {
